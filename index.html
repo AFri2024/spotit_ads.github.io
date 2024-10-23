@@ -6,12 +6,8 @@
     <title>Spotit_Ads</title>
     <style>
         body {
-            background-color: #CC338B; /* Light background for contrast */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            background-color: #FF1493; /* Light background for contrast */
+            margin: 0; /* Remove default margin */
         }
         .title {
             background-color: darkpink; /* Dark pink background */
@@ -20,7 +16,10 @@
             padding: 20px;
             font-size: 50px; /* Font size */
             text-align: center;
-            border-radius: 10px; /* Optional: rounded corners */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include border in width calculation */
+            position: absolute; /* Positioning */
+            top: 0; /* Align to top */
         }
     </style>
 </head>
@@ -28,3 +27,4 @@
     <div class="title">Spotit_Ads</div>
 </body>
 </html>
+
