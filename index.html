@@ -9,6 +9,7 @@
             background-color: #C71585; /* Light background for contrast */
             margin: 0; /* Remove default margin */
             font-family: Arial, sans-serif; /* Set a default font */
+            transition: opacity 0.5s; /* Fade effect */
         }
         .title {
             background-color: darkpink; /* Dark pink background */
@@ -23,16 +24,21 @@
         .nav {
             display: flex; /* Flexbox layout */
             justify-content: space-around; /* Space out items */
-            background-color: #C71585; /* White background for nav */
+            background-color: #fff; /* White background for nav */
             padding: 20px 0; /* Padding for nav */
             border-top: 2px solid black; /* Top border */
             width: 100%; /* Full width */
             box-sizing: border-box; /* Include padding in width calculation */
-            margin-top: 0; /* Ensure no margin */
         }
         .nav div {
             font-size: 20px; /* Font size for nav items */
-            color: #f1f1f1; /* Text color */
+            color: #333; /* Text color */
+            text-align: center; /* Center text */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .content {
+            display: none; /* Hidden by default */
+            padding: 20px;
             text-align: center; /* Center text */
         }
     </style>
@@ -40,13 +46,37 @@
 <body>
     <div class="title">Spotit_Ads</div>
     <div class="nav">
-        <div>About Us</div>
-        <div>Our Services</div>
-        <div>Contacts</div>
-        <div>Pricing</div>
+        <div onclick="navigate('about')">About Us</div>
+        <div onclick="navigate('services')">Our Services</div>
+        <div onclick="navigate('contacts')">Contacts</div>
+        <div onclick="navigate('pricing')">Pricing</div>
     </div>
+
+    <div id="content" class="content"></div>
+
+    <script>
+        function navigate(page) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.style.opacity = 0; // Fade out effect
+
+            setTimeout(() => {
+                if (page === 'about') {
+                    contentDiv.innerHTML = `<h2>About Us</h2><p>We are Spotit_Ads, dedicated to providing top-notch advertising solutions.</p>`;
+                } else if (page === 'services') {
+                    contentDiv.innerHTML = `<h2>Our Services</h2><p>We offer various advertising services tailored to your needs.</p>`;
+                } else if (page === 'contacts') {
+                    contentDiv.innerHTML = `<h2>Contacts</h2><p>Contact us at: info@spotitads.com</p>`;
+                } else if (page === 'pricing') {
+                    contentDiv.innerHTML = `<h2>Pricing</h2><p>Our pricing plans are designed to fit all budgets.</p>`;
+                }
+                contentDiv.style.display = 'block'; // Show content
+                contentDiv.style.opacity = 1; // Fade in effect
+            }, 500); // Duration of fade out
+        }
+    </script>
 </body>
 </html>
+
 
 
 
