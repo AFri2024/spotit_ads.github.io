@@ -61,13 +61,38 @@
 
             setTimeout(() => {
                 if (page === 'about') {
-                    contentDiv.innerHTML = `<h2>About Us</h2><p>We are Spotit_Ads, dedicated to providing top-notch advertising solutions.</p>`;
+                    contentDiv.innerHTML = `
+                        <h2>About Us</h2>
+                        <p>We are Spotit_Ads, dedicated to providing top-notch advertising solutions. Our team of experts works tirelessly to create impactful campaigns that resonate with your audience.</p>
+                    `;
                 } else if (page === 'services') {
-                    contentDiv.innerHTML = `<h2>Our Services</h2><p>We offer various advertising services tailored to your needs.</p>`;
+                    contentDiv.innerHTML = `
+                        <h2>Our Services</h2>
+                        <p>We offer a range of services, including:</p>
+                        <ul>
+                            <li>Digital Advertising</li>
+                            <li>Social Media Management</li>
+                            <li>Content Creation</li>
+                            <li>Brand Strategy</li>
+                        </ul>
+                    `;
                 } else if (page === 'contacts') {
-                    contentDiv.innerHTML = `<h2>Contacts</h2><p>Contact us at: info@spotitads.com</p>`;
+                    contentDiv.innerHTML = `
+                        <h2>Contacts</h2>
+                        <p>For inquiries, reach us at:</p>
+                        <p>Email: info@spotitads.com</p>
+                        <p>Phone: +27 123 456 789</p>
+                    `;
                 } else if (page === 'pricing') {
-                    contentDiv.innerHTML = `<h2>Pricing</h2><p>Our pricing plans are designed to fit all budgets.</p>`;
+                    contentDiv.innerHTML = `
+                        <h2>Pricing</h2>
+                        <p>Our pricing plans are designed to fit all budgets. Here’s a quick overview:</p>
+                        <ul>
+                            <li>Basic Plan: R500/month</li>
+                            <li>Standard Plan: R1000/month</li>
+                            <li>Premium Plan: R2000/month</li>
+                        </ul>
+                    `;
                 }
                 contentDiv.style.display = 'block'; // Show content
                 contentDiv.style.opacity = 1; // Fade in effect
@@ -76,6 +101,7 @@
     </script>
 </body>
 </html>
+
 
 
 
